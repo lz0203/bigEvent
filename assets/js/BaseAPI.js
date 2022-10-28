@@ -2,7 +2,7 @@
 //JQ中ajax提供的函数 用来拼接URL
 $.ajaxPrefilter(function (options) {
     //如果接口中包含my为开头的 添加请求头
-    if (options.url.indexOf('/my/') !== -1) {
+    if (options.url.indexOf('/my/') !== 1) {
         options.headers = {
             Authorization: localStorage.getItem('token')
         }
